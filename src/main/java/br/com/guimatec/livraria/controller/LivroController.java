@@ -5,6 +5,7 @@ import br.com.guimatec.livraria.service.LivroService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
+import org.modelmapper.ModelMapper;
 
 import java.util.List;
 
@@ -30,7 +31,7 @@ public class LivroController {
         return livroService.listaLivro();
     }
 
-    /*/@GetMapping("/{id}")
+    @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public Livro buscarLivroPorId(@PathVariable("id") Long id){
         return livroService.buscarPorId(id)
@@ -56,7 +57,6 @@ public class LivroController {
                     livroService.salvar(livroBase);
                     return Void.TYPE;
                 }).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Livro não encontrado."));
-    } */
-
+    }
 
 }

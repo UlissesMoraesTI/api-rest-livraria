@@ -2,10 +2,12 @@ package br.com.guimatec.livraria.controller;
 
 import br.com.guimatec.livraria.entity.Livro;
 import br.com.guimatec.livraria.service.LivroService;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-import org.modelmapper.ModelMapper;
+
 
 import java.util.List;
 
@@ -13,11 +15,11 @@ import java.util.List;
 @RequestMapping("/livro")
 public class LivroController {
 
-    private final LivroService livroService;
+    @Autowired
+    private LivroService livroService;
 
-    public LivroController(LivroService livroService){
-        this.livroService = livroService;
-    }
+    @Autowired
+    private ModelMapper modelMapper;
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)

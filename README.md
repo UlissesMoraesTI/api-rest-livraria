@@ -1,5 +1,7 @@
 # api-rest-livraria
-API REST Livraria
+API REST Livro
+
+![image](https://github.com/user-attachments/assets/94eb9f7a-9d94-4c26-94ba-15b499a1d7c4)
 
 Desenvolvimento de uma API REST em Java com objetivo de Manutenção em Cadastro de Livros.
 - Java JDK17

@@ -2,17 +2,14 @@
 API REST Livraria
 
 Desenvolvimento de uma API REST em Java com objetivo de Manutenção em Cadastro de Livros.
-- Java Spring
-- JPA
-- H2 
-
-| Tecnologias                  |
-| -----------------------------| 
-| JAVA JDK 17                  |
-| Maven                        |
-| IDEA Intellij                |
-| JPA (Java Persistence API)   |
-| H2 Banco de Dados em memória |
+- Java JDK17
+- Spring Boot
+- Maven
+- JPA - Java Persistence API
+- H2 - Banco de Dados em memória
+- git
+- IDEA Intellij
+- Postman
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)

@@ -11,8 +11,11 @@ import java.util.Optional;
 @Service
 public class LivroService {
 
-    @Autowired
-    private LivroRepository livroRepository;
+    private final LivroRepository livroRepository;
+
+    public LivroService(LivroRepository livroRepository) {
+        this.livroRepository = livroRepository;
+    }
 
     public Livro salvar(Livro livro) {
         return livroRepository.save(livro);
@@ -20,6 +23,10 @@ public class LivroService {
 
     public List<Livro> listaLivro() {
         return  livroRepository.findAll();
+    }
+
+    public List<Livro> buscarPorAutor(String autor) {
+        return  livroRepository.findByAutorIgnoreCaseContaining(autor);
     }
 
     public Optional<Livro> buscarPorId(Long id) {

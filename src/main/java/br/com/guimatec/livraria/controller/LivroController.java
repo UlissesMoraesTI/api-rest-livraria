@@ -15,11 +15,14 @@ import java.util.List;
 @RequestMapping("/livro")
 public class LivroController {
 
-    @Autowired
-    private LivroService livroService;
+    private final LivroService livroService;
 
-    @Autowired
-    private ModelMapper modelMapper;
+    private final ModelMapper modelMapper;
+
+    public LivroController(LivroService livroService, ModelMapper modelMapper) {
+        this.livroService = livroService;
+        this.modelMapper = modelMapper;
+    }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
@@ -39,6 +42,15 @@ public class LivroController {
         return livroService.buscarPorId(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Livro não encontrado"));
     }
+
+    @GetMapping("/autor/{autor}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Livro> buscarLivroPorAutor(@PathVariable("autor") String autor){
+        //return livroService.buscarPorAutor(autor);
+        List<Livro> livros = livroService.buscarPorAutor(autor);
+        return livros;
+    }
+        //return livros.stream().findFirst().get();
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)

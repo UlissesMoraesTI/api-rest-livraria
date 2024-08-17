@@ -24,13 +24,14 @@ Desenvolvimento de uma API REST em Java com objetivo de Manutenção em Cadastro
 | Controller | Controlador REST para expor os endpoints da API                       |
 | Service    | Regras de Negócio                                                     |
 
-| Funcionalidades          | CRUD   | Objetivo                                                                                  |
-| ------------------------ | ------ | ----------------------------------------------------------------------------------------- | 
-| Salvar Livro             | CREATE | private Livro salvar(@RequestBody Livro livro){                                           |
-| Listar Livro             | READ   | public List<Livro> listaLivro() {                                                         | 
-| Consultar Livro por ID   | READ   | public Livro buscarLivroPorId(@PathVariable("id") Long id){                               |
-| Excluir Livro por ID     | DELETE | public void removerLivro(@PathVariable("id") Long id) {                                   |
-| Atualizar Livro por ID   | UPDATE | public void atualizarLivro(@PathVariable("id") Long id, @RequestBody Livro livro) {       |
+| Funcionalidades           | CRUD   | Objetivo                                                                                  |
+| ------------------------- | ------ | ----------------------------------------------------------------------------------------- | 
+| Salvar Livro              | CREATE | private Livro salvar(@RequestBody Livro livro){                                           |
+| Listar Livro              | READ   | public List<Livro> listaLivro() {                                                         | 
+| Consultar Livro por ID    | READ   | public Livro buscarLivroPorId(@PathVariable("id") Long id){                               |
+| Consultar Livro por Autor | READ   | public List<Livro> buscarLivroPorAutor(@PathVariable("autor") String autor){              |
+| Excluir Livro por ID      | DELETE | public void removerLivro(@PathVariable("id") Long id) {                                   |
+| Atualizar Livro por ID    | UPDATE | public void atualizarLivro(@PathVariable("id") Long id, @RequestBody Livro livro) {       |
 
 <h1>   
      <img align="center" width="40px">

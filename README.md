@@ -2,6 +2,9 @@
 API REST Livraria
 
 Desenvolvimento de uma API REST em Java com objetivo de Manutenção em Cadastro de Livros.
+- Java Spring
+- JPA
+- H2 
 
 | Tecnologias                  |
 | -----------------------------| 
